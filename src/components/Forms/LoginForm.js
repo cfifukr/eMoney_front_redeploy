@@ -20,7 +20,7 @@ function LoginForm({setUser}){
     const handleSubmit = async(e) =>{
         e.preventDefault()
         try{
-            const response = await api.post('http://emoney-sql-6cdf11cc58bb.herokuapp.com/api/v1/login', {"username":username, "password": password})
+            const response = await api.post('https://emoney-sql-6cdf11cc58bb.herokuapp.com/api/v1/login', {"username":username, "password": password})
             console.log(response);
             if(response.data.isException || !response.data.token){
                 setError(response?.data?.errorDescription);
