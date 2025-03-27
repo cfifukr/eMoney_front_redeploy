@@ -2,13 +2,17 @@ import React from "react";
 import './TermsService.css'
 import FooterComp from "../FooterComp";
 import { useState } from "react";
+import { Helmet } from 'react-helmet';
+
 
 export default function TermsService(){
     const [agree, setAgree] = useState(false);
 
 
     return<>    
-
+        <Helmet>
+             <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <div className="terms-service-page">
             <h1 className="reddit-black-font"> 
                 We owe you nothing, but you owe us all
